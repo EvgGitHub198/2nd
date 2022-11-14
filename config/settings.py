@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'blog',
     'mptt',
     'ckeditor',
+    'contact',
 
     'django.contrib.admin',
     'django.contrib.auth',

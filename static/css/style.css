@@ -137,7 +137,7 @@ ol {
 	right: 0;
 	height: 13px;
 	width: 83px;
-	background-image: url(../img/line.png);
+	background-image: url(../img/typography.jpg);
 	content: "";
 	margin: 0 auto;
 }
@@ -427,7 +427,7 @@ ol {
 .header__menu ul li:hover .children {
 	opacity: 1;
 	visibility: visible;
-	top: 41px;
+	top: 41px;}
 
 .header__menu ul li .dropdown__menu li {
 	display: block;
@@ -2574,6 +2574,10 @@ ol {
 /*---------------------
   Contact
 -----------------------*/
+.contact_icon {
+	max-width: 5%;
+
+}
 
 .contact {
 	padding-top: 0;
