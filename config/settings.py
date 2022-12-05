@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'contact',
     "debug_toolbar",
     'gallery',
+    'captcha',
+    'sendmail',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -148,3 +150,29 @@ CACHES = {
         'LOCATION': os.path.join(BASE_DIR, 'cache'),
     }
 }
+
+RECAPTCHA_PUBLIC_KEY = 'MyRecaptchaKey123'
+RECAPTCHA_PRIVATE_KEY = 'MyRecaptchaPrivateKey456'
+
+RECAPTCHA_PROXY = {'http': 'http://127.0.0.1:8000', 'https': 'https://127.0.0.1:8000'}
+RECAPTCHA_DOMAIN = 'www.recaptcha.net'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'mishagon02@gmail.com'
+EMAIL_HOST_PASSWORD = 'nchhfimsvyarssib'
+EMAIL_PORT = 587
+
+
+
+
+REDIS_HOST = '0.0.0.0'
+REDIS_PORT = '6379'
+CELERY_BROKER_URL = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/0'
+CELERY_BROKER_TRANSPORT_OPTION = {'visibility_timeout': 3600}
+CELERY_RESULT_BACKEND = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/0'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
